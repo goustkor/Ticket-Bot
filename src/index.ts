@@ -50,7 +50,7 @@ Connecting to Discord...
 fetch("https://api.github.com/repos/Sayrix/Ticket-Bot/tags").then((res) => {
 	if (Math.floor(res.status / 100) !== 2) return console.warn("🔄  Failed to pull latest version from server");
 	res.json().then((json) => {
-		// Assumign the format stays consistent (i.e. x.x.x)
+               // Assuming the format stays consistent (i.e. x.x.x)
 		const latest = json[0].name.split(".").map((k: string) => parseInt(k));
 		// eslint-disable-next-line @typescript-eslint/no-var-requires
 		const current = require("../package.json").version.split(".")
