@@ -47,8 +47,8 @@ export default class RemoveCommand extends BaseCommand {
 			new StringSelectMenuBuilder()
 				.setCustomId("removeUser")
 				.setPlaceholder("Please select a user to remove")
-				.setMinValues(1)
-				.setMaxValues(ticket.invited.length)
+                                .setMinValues(1)
+                                .setMaxValues(invited.length)
 				.addOptions(
 					// @TODO: Fix type definitions when I figure it out via ORM migration. For now assign a random type that gets the error removed.
 					addedUsers.map((user) => {
